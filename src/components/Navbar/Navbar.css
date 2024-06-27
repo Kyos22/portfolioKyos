@@ -1,0 +1,77 @@
+
+.logo{
+    font-size: 1.5rem;
+    font-family: Work San;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 70px;
+    align-items: center;
+      
+    padding-left: 4rem;
+    padding-right: 10rem;
+    position: relative;
+
+}
+.hamburger-menu {
+    display: none; /* Hide the hamburger menu by default */
+    /* ...existing styles... */
+}
+.navbar-ul{
+    display: flex;
+    
+}
+.navbar-item{
+    padding-left: 4rem;
+    font-family: Space Grotesk;
+    font-weight: 600;
+    color: grey;
+}
+/*for medium devices*/
+@media screen and (max-width: 768px){
+    .navbar{
+        padding-right: 4rem;
+    }
+    .navbar-item{
+        padding-left: 4rem;
+    }
+}
+/* Existing styles... */
+
+@media screen and (max-width: 576px) {
+    .navbar{
+        padding-left: 2rem;
+    }
+    .navbar-ul {
+        display: none; /* Hide the navigation items by default */
+        flex-direction: column; /* Stack them vertically when active */
+        position: absolute;
+        top: 70px; right: 0;
+        width: 100%;
+        background-color: pink;
+    }
+    .navbar-ul.active {
+        display: flex; /* Display the navigation items when active */
+    }
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu */
+        position: absolute;
+        top: 50%; /* Center vertically */
+        right: 1rem; /* Distance from the right */
+        transform: translateY(-50%); /* Adjust vertical positioning */
+    }
+    .hamburger-menu div {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+}
+
+/*for small devices*/
+@media screen and (max-width: 350px){
+
+}
